@@ -2,7 +2,7 @@ using SplashKitSDK;
 
 namespace MouseDownExample
 {
-    public static class Program
+    public class Program
     {
         public static void Main()
         {
@@ -62,12 +62,12 @@ namespace MouseDownExample
 
                 wasMouseDown = leftMouseDown;
 
-                SplashKit.ClearScreen(Color.White);
+                SplashKit.ClearScreen(SplashKit.ColorWhite());
 
                 if (dragging)
                 {
                     SplashKit.FillCircle(
-                        Color.Red,
+                        SplashKit.ColorRed(),
                         circleX,
                         circleY,
                         circleRadius
@@ -76,7 +76,7 @@ namespace MouseDownExample
                 else
                 {
                     SplashKit.FillCircle(
-                        Color.Blue,
+                        SplashKit.ColorBlue(),
                         circleX,
                         circleY,
                         circleRadius
@@ -85,7 +85,7 @@ namespace MouseDownExample
 
                 SplashKit.DrawText(
                     "Click and drag the circle",
-                    Color.Black,
+                    SplashKit.ColorBlack(),
                     20,
                     20
                 );
